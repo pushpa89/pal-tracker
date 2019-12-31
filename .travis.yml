@@ -12,8 +12,10 @@ jobs:
     - stage: build and publish
       language: java
       jdk: openjdk11
-      install: skip
-      script: ./gradlew clean build
+      before_install:
+	 - chmod +x gradlew
+      script:
+  	- ./gradlew clean build -i --continue
       before_deploy:
         - git config --local user.name "Travis CI"
         - git config --local user.email "travis@example.com"
@@ -33,7 +35,7 @@ jobs:
       deploy:
         provider: cloudfoundry
         api: $CF_API_URL
-        username: $CF_USERNAME
-        password: $CF_PASSWORD
-        organization: $CF_ORG
-        space: $CF_SPACE
+        username: pushpalatha.s@cognizant.com
+        password: Pushpa_1989
+        organization: SpringAssignment
+        space: development
