@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: io.pivotal.pal.tracker.PalTrackerApplication
+Class-Path: C:\Users\803828\workspace\pal-tracker\build\classes\java\mai
+ n\io\pivotal\pal\tracker
+

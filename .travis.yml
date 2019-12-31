@@ -20,7 +20,7 @@ jobs:
         - git tag -f $RELEASE_TAG
       deploy:
         provider: releases
-        api_key: $GITHUB_OAUTH_TOKEN
+        api_key: 4f3b3c4cb3d8bb89ffbf6b82b838df8a201f27d9
         file: "build/libs/pal-tracker.jar"
         skip_cleanup: true
     - stage: deploy to cf
@@ -32,8 +32,8 @@ jobs:
         - echo "Deploying $RELEASE_TAG to Cloud Foundry"
       deploy:
         provider: cloudfoundry
-        api: $CF_API_URL
-        username: $CF_USERNAME
-        password: $CF_PASSWORD
-        organization: $CF_ORG
-        space: $CF_SPACE
+        api: https://pal-tracker-chatty-ostrich-zl.cfapps.io/
+        username: pushpalatha.s@cognizant.com
+        password: Pushpa_1989
+        organization: SpringAssignment
+        space: development
