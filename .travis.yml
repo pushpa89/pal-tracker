@@ -14,14 +14,14 @@ jobs:
       jdk: openjdk11
       install: skip
       script:
-	- ./gradlew clean build -i --continue
+	 ./gradlew clean build
       before_deploy:
-        - git config --local user.name "Travis CI"
-        - git config --local user.email "travis@example.com"
+        - git config --local user.name "pushpa89"
+        - git config --local user.email "pushpalatha.s@cognizant.com"
         - git tag -f $RELEASE_TAG
       deploy:
         provider: releases
-        api_key: $GITHUB_OAUTH_TOKEN
+        api_key: 41cd3e96d536dfd6ca7f65f98808214bccbde05b
         file: "build/libs/pal-tracker.jar"
         skip_cleanup: true
     - stage: deploy to cf
@@ -33,7 +33,7 @@ jobs:
         - echo "Deploying $RELEASE_TAG to Cloud Foundry"
       deploy:
         provider: cloudfoundry
-        api: $CF_API_URL
+        api: https://pal-tracker-push.cfapps.io
         username: pushpalatha.s@cognizant.com
         password: Pushpa_1989
         organization: SpringAssignment
