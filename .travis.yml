@@ -12,8 +12,8 @@ jobs:
     - stage: build and publish
       language: java
       jdk: openjdk11
-      before_install: chmod +x /.gradlew
-      script:/.gradlew clean build
+      install: skip
+      script: gradle build connectedCheck
       before_deploy:
         - git config --local user.name "pushpa89"
         - git config --local user.email "pushpalatha.s@cognizant.com"
