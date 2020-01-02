@@ -13,7 +13,7 @@ jobs:
       language: java
       jdk: openjdk11
       install: skip
-      script: gradle build connectedCheck
+      script: gradle clean build
       before_deploy:
         - git config --local user.name "pushpa89"
         - git config --local user.email "pushpalatha.s@cognizant.com"
