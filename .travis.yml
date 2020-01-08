@@ -12,7 +12,10 @@ jobs:
     - stage: build and publish
       language: java
       jdk: openjdk11
-      install: skip
+      before_install:
+  	- pwd
+  	- ls -la
+  	- chmod +x ./gradlew
       script: ./gradlew clean build
       before_deploy:
         - git config --local user.name "pushpa89"
