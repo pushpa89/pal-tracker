@@ -12,11 +12,12 @@ jobs:
     - stage: build and publish
       language: java
       jdk: openjdk11
+      install: skip
+      script: ./gradlew clean build
       before_install:
-  	- pwd
-  	- ls -la
-  	- chmod +x gradlew
-      script: gradlew clean build
+        - pwd
+        - ls -la
+        - chmod +x ./gradlew
       before_deploy:
         - git config --local user.name "pushpa89"
         - git config --local user.email "pushpalatha.s@cognizant.com"
