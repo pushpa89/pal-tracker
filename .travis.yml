@@ -24,7 +24,7 @@ jobs:
         - git tag -f $RELEASE_TAG
       deploy:
         provider: releases
-        api_key: e8c9b0efa35f81b76845eb7893a24442de31c1a1
+        api_key: 9b143cd50463d1977cb6f677888f9030ca590b72
         file: "build/libs/pal-tracker.jar"
         skip_cleanup: true
     - stage: deploy to cf
