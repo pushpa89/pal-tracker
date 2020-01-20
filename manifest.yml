@@ -3,6 +3,8 @@ applications:
   - name: pal-tracker
     path: build/libs/pal-tracker.jar
     random-route: true
+    memory: 500M
     env:
       WELCOME_MESSAGE: Hello from the review environment
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+      JAVA_OPTS: '-Xmx250m -Xss100m'
