@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class InMemoryTimeEntryRepository implements TimeEntryRepository{
+public class InMemoryTimeEntryRepository  implements TimeEntryRepository{
 
     private HashMap<Long, TimeEntry> hmTimeEntries = new HashMap<>();
     Long currentId = 1L;
