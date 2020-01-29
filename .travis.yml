@@ -52,8 +52,8 @@ jobs:
         - scripts/migrate-databases.sh pal-tracker .
       deploy:
         provider: cloudfoundry
-        api: https://pal-tracker-insightful-echidna-wz.cfapps.io/
-        username: pushpalatha.s@cognizant.com
-        password: Pushpa_1989
-        organization: springassignment
-        space: development
+        api: $CF_API_URL
+        username: $CF_USERNAME
+        password: $CF_PASSWORD
+        organization: $CF_ORG
+        space: $CF_SPACE
